@@ -1,0 +1,45 @@
+{
+  "name": "lambda-tagable-dynamodb2sns",
+  "version": "0.0.1",
+  "description": "Listens to changes on taggable dynamoDB and routes them to SNS endpoints",
+  "main": "src/index.js",
+  "scripts": {
+    "nocov": "node ./node_modules/.bin/mocha test/*.js test/lib/*.js",
+    "test": "semistandard && npm run coverage",
+    "coverage": "node ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha test/*.js test/lib/*.js --report lcov -- -R spec",
+    "lint": "node ./node_modules/eslint/bin/eslint.js --fix *.js **/*.js **/test/*.js **/test/lib/*.js",
+    "deploy": "node ./node_modules/dpl/dpl.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/numo-labs/lambda-tagable-dynamodb2sns.git"
+  },
+  "license": "GPL-2.0",
+  "homepage": "https://github.com/numo-labs/lambda-tagable-dynamodb2sns#readme",
+  "devDependencies": {
+    "aws-sdk": "^2.2.40",
+    "dpl": "^1.0.6",
+    "eslint": "^1.10.3",
+    "eslint-config-semistandard": "^5.0.0",
+    "istanbul": "^0.4.2",
+    "mocha": "^2.4.5",
+    "simple-mock": "^0.6.0",
+    "semistandard": "^7.0.5"
+  },
+  "dependencies": {
+    "async": "^1.5.2",
+    "aws-lambda-helper": "^2.3.0",
+    "lodash": "^4.6.1"
+  },
+  "semistandard": {
+    "globals": [
+      "describe",
+      "it",
+      "afterEach"
+    ]
+  },
+  "pre-commit": [
+    "semistandard",
+    "check-coverage"
+  ]
+}
