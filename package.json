@@ -41,5 +41,10 @@
   "pre-commit": [
     "semistandard",
     "check-coverage"
+  ],
+  "files_to_deploy": [
+    "package.json",
+    "index.js",
+    "lib/"
   ]
 }
