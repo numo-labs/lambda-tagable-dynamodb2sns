@@ -72,7 +72,7 @@ describe('lambda-tagable-dynamodb2sns', function () {
   describe('_getDiff - get the difference between old and new values', function () {
     it('should be able to get the diffences between old and new', function (done) {
       var doc = handler._getDiff(fixtures.getDoc());
-      console.log(JSON.stringify(doc));
+      // console.log(JSON.stringify(doc));
       var expectedResult = {
         'tags': {
           'modified': [

@@ -1,5 +1,5 @@
 var AwsHelper = require('aws-lambda-helper');
-var handler = require('./lib/index');
+var handler = require('./lib/index').handler;
 
 exports.handler = function (event, context) {
   // Initialise the AwsHelper
