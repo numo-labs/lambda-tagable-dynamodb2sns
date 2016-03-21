@@ -18,7 +18,7 @@
   "homepage": "https://github.com/numo-labs/lambda-tagable-dynamodb2sns#readme",
   "devDependencies": {
     "aws-sdk": "^2.2.40",
-    "dpl": "^1.0.6",
+    "dpl": "1.0.6",
     "eslint": "^1.10.3",
     "eslint-config-semistandard": "^5.0.0",
     "istanbul": "^0.4.2",
